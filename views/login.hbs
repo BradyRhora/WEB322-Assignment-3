@@ -1,9 +1,10 @@
+<title>BH Login</title>
 <main>
     <div class="center" id="form-container">
         <h2>Login</h2>
-        <form>
-            <input required class="middleCol" name="email" type="email" placeholder="Email Address"/>
-            <input required class="middleCol" name="password" type="password" placeholder="Password"/>
+        <form id="form">
+            <input id="email" class="middleCol" name="email" type="email" placeholder="Email Address"/>
+            <input id="password" class="middleCol" name="password" type="password" placeholder="Password"/>
             <div class="middleCol" id ="rememberBox">
                 <label for="remember">Remember Me</label>
                 <input type="checkbox" name="remember"/>
@@ -12,3 +13,5 @@
         </form>
     </div>
 </main>
+
+{{> formscript post="'/login-user'" onsuccess="'/dashboard'"}}

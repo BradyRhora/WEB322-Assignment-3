@@ -1,21 +1,22 @@
+<title>BH Register</title>
 <main>
     <div class="center" id="form-container">
         <h2>Create an Account</h2>
-        <form action="/register-user" method="POST">
-            <input placeholder="First Name" name="firstName" type="text"/>
-            <input placeholder="Last Name" name="lastName" type="text"/>
+        <form id="form" action="/register-user", method="POST">
+            <input id="firstName" placeholder="First Name" name="firstName" type="text"/>
+            <input id="lastName" placeholder="Last Name" name="lastName" type="text"/>
 
-            <input placeholder="Email Address" name="email" type="email"/>
-            <input placeholder="Phone Number (123-456-7890)" name="phone" type="tel"/>
+            <input id="email" placeholder="Email Address" name="email" type="email"/>
+            <input id="phone" placeholder="Phone Number (123-456-7890)" name="phone" type="tel"/>
 
             <div class="horizontal-line"></div>
 
-            <input placeholder="Street Address" name="address" type="text"/>
-            <input placeholder="Address Line 2 (optional)" name="address2" type="text"/>
+            <input id="address" placeholder="Street Address" name="address" type="text"/>
+            <input id="address2" placeholder="Address Line 2 (optional)" name="address2" type="text"/>
 
-            <input placeholder="City" name="city" type="text"/>
-            <input style="grid-column: 3/4;min-width:150px" placeholder="Province/State" name="province" type="text"/>
-            <input style="grid-column: 4/5;min-width:150px" placeholder="Postal/Zip Code" name="postal" type="text" maxlength="7"/>
+            <input id="city" placeholder="City" name="city" type="text"/>
+            <input id="province" style="grid-column: 3/4;min-width:150px" placeholder="Province/State" name="province" type="text"/>
+            <input id="postal" style="grid-column: 4/5;min-width:150px" placeholder="Postal/Zip Code" name="postal" type="text" maxlength="7"/>
 
             <select style="grid-column: 1/5"placeholder="Country" id="country" name="country">
                 <option>Country...</option>
@@ -267,10 +268,12 @@
 
             <div class="horizontal-line"></div>
 
-            <input placeholder="Password" name="password" type="password"/>
-            <input placeholder="Confirm Password" name="password2" type="password"/>
+            <input id="password" placeholder="Password" name="password" type="password"/>
+            <input id="password2" placeholder="Confirm Password" name="password2" type="password"/>
             
             <input type="submit" value="Submit" style="grid-column: 1/5;" class="action-button"/>
         </form>
     </div>
 </main>
+
+{{> formscript post="'/register-user'" onsuccess="'/dashboard'"}}
