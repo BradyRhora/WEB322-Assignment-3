@@ -92,9 +92,14 @@ input, select, textarea{
     padding:0px;
 }
 
-.formError::placeholder{
+.formError::placeholder, .formError[name="country"]{
     background-color: rgb(255, 94, 94);
     color: white;
+}
+
+.formError>option{
+    background-color:white;
+    color:black;
 }
 
 .horizontal-line{

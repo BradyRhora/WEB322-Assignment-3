@@ -4,6 +4,10 @@
         formElems.forEach(x=>x.classList.remove("formError"));
     }
 
+    function clearError(elem){
+        elem.classList.remove("formError");
+    }
+
 
     async function submit(){
         clearErrors();
